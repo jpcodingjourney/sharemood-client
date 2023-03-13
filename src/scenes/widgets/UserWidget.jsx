@@ -9,7 +9,7 @@ import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { BACKEND_URL } from "config";
 
 const UserWidget = ({ userId, picturePath }) => {
@@ -45,26 +45,28 @@ const UserWidget = ({ userId, picturePath }) => {
     <WidgetWrapper>
       {/* FIRST ROW */}
       <FlexBetween
-        gap="0.5rem"
-        pb="1.1rem"
-        onClick={() => navigate(`/profile/${userId}`)}
+      // gap="0.5rem"
+      // pb="1.1rem"
+      // onClick={() => navigate(`/profile/${userId}`)}
       >
         <FlexBetween gap="1rem">
           <UserImage image={picturePath} />
           <Box>
-            <Typography
-              variant="h4"
-              color={dark}
-              fontWeight="500"
-              sx={{
-                "&:hover": {
-                  color: palette.primary.light,
-                  cursor: "pointer",
-                },
-              }}
-            >
-              {firstName} {lastName}
-            </Typography>
+            <Link to={`/profile/${userId}`} style={{ textDecoration: "none" }}>
+              <Typography
+                variant="h4"
+                color={dark}
+                fontWeight="500"
+                sx={{
+                  "&:hover": {
+                    color: palette.primary.light,
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                {firstName} {lastName}
+              </Typography>
+            </Link>
             <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>

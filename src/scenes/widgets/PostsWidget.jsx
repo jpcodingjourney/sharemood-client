@@ -8,7 +8,6 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   const token = useSelector((state) => state.token);
-  const loggedInUserId = useSelector((state) => state.user?._id);
 
   const getPosts = async () => {
     const response = await fetch(`${BACKEND_URL}/posts`, {
