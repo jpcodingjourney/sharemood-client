@@ -103,7 +103,7 @@ const PostWidget = ({
         subtitle={location}
         userPicturePath={userPicturePath}
       />
-      <Box sx={{ maxWidth: "454px" }}>
+      <Box sx={{ maxWidth: "800px" }}>
         <Typography
           color={main}
           sx={{
