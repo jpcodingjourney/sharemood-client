@@ -10,7 +10,7 @@ const AdvertWidget = () => {
   const medium = palette.neutral.dark;
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper maxWidth="430px">
       <FlexBetween>
         <Typography color={dark} variant="h5" fontWeight="500">
           Sponsored

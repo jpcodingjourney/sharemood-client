@@ -42,7 +42,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const { firstName, lastName, location, occupation } = user;
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper maxWidth="430px">
       {/* FIRST ROW */}
       <FlexBetween
       // gap="0.5rem"
@@ -101,10 +101,17 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 Twitter
               </Typography>
-              <Typography color={medium}>Social Network</Typography>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Typography color={medium}>Social Network</Typography>
+              </a>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
 
         <FlexBetween gap="1rem">
@@ -114,10 +121,17 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={main} fontWeight="500">
                 Linkedin
               </Typography>
-              <Typography color={medium}>Network Platform</Typography>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Typography color={medium}>Network Platform</Typography>
+              </a>
             </Box>
           </FlexBetween>
-          <EditOutlined sx={{ color: main }} />
+          {/* <EditOutlined sx={{ color: main }} /> */}
         </FlexBetween>
       </Box>
     </WidgetWrapper>

@@ -54,7 +54,7 @@ const MyPostWidget = ({}) => {
   };
 
   return (
-    <WidgetWrapper>
+    <WidgetWrapper maxWidth="700px">
       <CenterTag gap="1.5rem">
         <InputBase
           placeholder="What's on your mind..."

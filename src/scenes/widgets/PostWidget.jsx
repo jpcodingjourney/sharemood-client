@@ -96,14 +96,14 @@ const PostWidget = ({
   // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <WidgetWrapper m="2rem 0">
+    <WidgetWrapper m="2rem 0" maxWidth="700px">
       <Friend
         friendId={postUserId}
         name={name}
         subtitle={location}
         userPicturePath={userPicturePath}
       />
-      <Box sx={{ maxWidth: "800px" }}>
+      <Box>
         <Typography
           color={main}
           sx={{
